@@ -1,0 +1,596 @@
+{
+  "warm": {
+    "meta_data": {"label": "Cold/warm", "label_sr": "Hladna/topla", "type": "bipolar"},
+    "colors": {
+      "red": 1,
+      "orange": 1,
+      "yellow": 1,
+      "pink": 0.5,
+      "brown": 0.2,
+      "blue": -1,
+      "green": -1,
+      "purple": -0.2
+    }
+  },
+  "monochrome": {
+    "meta_data": {"label": "Color/BW", "label_sr": "Šarena/crnobela", "type": "bipolar"},
+    "colors": {
+      "black": 1,
+      "white": 1,
+      "red": -1,
+      "orange": -1,
+      "yellow": -1,
+      "pink": -1,
+      "blue": -1,
+      "green": -1,
+      "purple": -1
+    }
+  },
+  "light": {
+    "meta_data": {"label": "Dark/light", "label_sr": "Mračna/vedra", "type": "bipolar"},
+    "colors": {
+      "white": 1,
+      "yellow": 1,
+      "pink": 0.5,
+      "orange": 0.2,
+      "purple": -0.2,
+      "brown": -1,
+      "black": -1
+    },
+    "particular_colors": {
+      "deep_carmine_pink": 1,
+      "blue_gray": 1,
+      "cornflower_blue": 1,
+      "aero": 1,
+      "cameo_pink": 1,
+      "cerise_pink": 1,
+      "persian_rose": 1,
+      "deep_saffron": 1,
+      "primary_orange": 1,
+      "vivid_gamboge": 1,
+      "celestial_blue": 1,
+      "white": 1,
+      "gainsboro": 1,
+      "silver": 1,
+      "tangerine_yellow": 1,
+      "aztec_gold": 1,
+      "mikado_yellow": 1,
+      "sizzling_sunrise": 1,
+      "lemon_yellow": 1,
+      "blood_orange": -1,
+      "japanese_carmine": -1,
+      "vivid_auburn": -1,
+      "puce_red": -1,
+      "crimson_red": -1,
+      "dark_powder_blue": -1,
+      "dark_midnight_blue": -1,
+      "dark_blue": -1,
+      "sea_blue": -1,
+      "dark_cornflower_blue": -1,
+      "st_patricks_blue": -1,
+      "philippine_blue": -1,
+      "cadmium_blue": -1,
+      "medium_persian_blue": -1,
+      "cobalt_blue": -1,
+      "sea_green": -1,
+      "green_cyan": -1,
+      "bangladesh_green": -1,
+      "la_salle_green": -1,
+      "pakistan_green": -1,
+      "mughal_green": -1,
+      "philippine_green": -1,
+      "patriarch": -1,
+      "spanish_purple": -1,
+      "midnight": -1,
+      "grape": -1,
+      "pink_raspberry": -1,
+      "liver": -1,
+      "russet": -1,
+      "saddle_brown": -1,
+      "black": -1,
+      "raisin_black": -1
+    }
+  },
+  "complex": {
+    "meta_data": {"label": "Simple/complex", "label_sr": "Laka/teška", "type": "bipolar"},
+    "direct_rules": {
+      "complexity": 1,
+      "symbol_chance": 1
+    },
+    "layout": {
+      "unicolor": -1,
+      "tricolor_vertical": -0.7,
+      "tricolor_horizontal": -0.7,
+      "bicolor_vertical": -0.9,
+      "bicolor_horizontal": -0.9,
+      "bicolor_diagonal_left": -0.6,
+      "bicolor_diagonal_right": -0.6,
+      "pale": -0.3,
+      "chevron": -0.3,
+      "canton": 0.5,
+      "canton_cross": 0.5,
+      "stripes_horizontal": 0.5,
+      "stripes_vertical": 0.5,
+      "checkered": 0.6,
+      "sunburst": 0.6,
+      "lozenges": 0.6
+    }
+  },
+  "symbolic": {
+    "meta_data": {"label": "Symbolic", "label_sr": "Nema/ima simbola", "type": "bipolar"},
+    "direct_rules": {
+      "symbol_chance": 1
+    }
+  },
+  "anarchist": {
+    "meta_data": {"label": "Anarchist", "label_sr": "Anarhistička", "type": "unipolar"},
+    "layout": {
+      "bicolor_diagonal_left": 1,
+      "bicolor_diagonal_right": 1,
+      "bend_left": 0.2,
+      "bend_right": 0.2
+    },
+    "colors": {
+      "red": 0.5,
+      "black": 1
+    },
+    "symbols": {
+      "anarchism": 1
+    }
+  },
+  "african": {
+    "meta_data": {"label": "African", "label_sr": "Afrička", "type": "unipolar"},
+    "layout": {
+      "tricolor_vertical": 0.1,
+      "tricolor_horizontal": 0.1,
+      "bicolor_vertical": 0.1,
+      "bicolor_horizontal": 0.1,
+      "chevron": 0.1,
+      "pall": 0.5
+    },
+    "colors": {
+      "red": 1,
+      "green": 1,
+      "black": 1,
+      "yellow": 1
+    },
+    "symbols": {
+      "african": 1
+    }
+  },
+  "slavic": {
+    "meta_data": {"label": "Slavic", "label_sr": "Slovenska", "type": "unipolar"},
+    "layout": {
+      "tricolor_vertical": 0.2,
+      "tricolor_horizontal": 1,
+      "bicolor_vertical": 0.1,
+      "bicolor_horizontal": 0.1,
+      "chevron": 0.1
+    },
+    "colors": {
+      "red": 1,
+      "white": 1,
+      "blue": 1
+    },
+    "symbols": {
+      "slavic": 1
+    }
+  },
+  "queer": {
+    "meta_data": {"label": "Queer", "label_sr": "Kvir-LGBT", "type": "unipolar"},
+    "colors": {
+      "purple": 1,
+      "pink": 1,
+      "red": 0.5,
+      "orange": 0.2,
+      "yellow": 0.2,
+      "blue": 0.5,
+      "brown": 0.3
+    },
+    "layout": {
+      "stripes_horizontal": 1,
+      "stripes_vertical": 0.7,
+      "lozenges": 0.5,
+      "checkered": 0.5,
+      "sunburst": 0.5
+    },
+    "symbols": {
+      "queer": 1
+    },
+    "direct_rules": {
+      "complexity": 0.7,
+      "alternating_colors_chance": 0,
+      "rainbow_palette": 1
+    }
+  },
+  "corporate": {
+    "meta_data": {"label": "Corporate", "label_sr": "Korporativna", "type": "unipolar"},
+    "symbols": {
+      "corporate": 1,
+      "capitalism": 1,
+      "crypto": 0.5
+    }
+  },
+  "zodiac": {
+    "meta_data": {"label": "Zodiac", "label_sr": "Horoskopska", "type": "unipolar"},
+    "symbols": {
+      "zodiac": 1
+    }
+  },
+  "socialist": {
+    "meta_data": {"label": "Socialist", "label_sr": "Socijalistička", "type": "unipolar"},
+    "layout": {
+      "unicolor": 0.7,
+      "bicolor_diagonal_left": 0.1,
+      "bicolor_diagonal_right": 0.4,
+      "sunburst": 0.1,
+      "tricolor_horizontal": 0.2
+    },
+    "colors": {
+      "red": 1,
+      "black": 0.3,
+      "white": 0.2
+    },
+    "symbols": {
+      "socialism": 1,
+      "communism": 1
+    }
+  },
+  "serbian": {
+    "meta_data": {"label": "Serbian", "label_sr": "Srpska", "type": "unipolar"},
+    "layout": {
+      "tricolor_horizontal": 1,
+      "bicolor_horizontal": 0.3
+    },
+    "colors": {
+      "red": 1,
+      "white": 1,
+      "blue": 1
+    },
+    "symbols": {
+      "serbian": 1,
+      "yugoslav": 0.5
+    }
+  },
+  "belgrade": {
+    "meta_data": {"label": "Belgrade", "label_sr": "Beogradska", "type": "unipolar"},
+    "direct_rules": {
+      "symbol_chance": 1
+    },
+    "symbols": {
+      "belgrade": 1
+    }
+  },
+  "croatian": {
+    "meta_data": {"label": "Croatian", "label_sr": "Hrvatska", "type": "unipolar"},
+    "layout": {
+      "tricolor_horizontal": 1,
+      "bicolor_horizontal": 0.3,
+      "checkered": 1
+    },
+    "colors": {
+      "red": 1,
+      "white": 1,
+      "blue": 1
+    },
+    "symbols": {
+      "croatian": 1,
+      "yugoslav": 0.5
+    }
+  },
+  "south_american": {
+    "meta_data": {"label": "South American", "label_sr": "Latinoamerička", "type": "unipolar"},
+    "layout": {
+      "tricolor_horizontal": 0.9,
+      "diamond": 0.9,
+      "stripes_horizontal": 0.5,
+      "checkered": 0.2
+    },
+    "colors": {
+      "red": 1,
+      "yellow": 1,
+      "blue": 1,
+      "white": 1
+    },
+    "symbols": {
+      "south_american": 1,
+      "hispanic": 1
+    },
+    "direct_rules": {
+      "alternating_colors_chance": 0.6
+    }
+  },
+  "love": {
+    "meta_data": {"label": "Love", "label_sr": "Ljubavna", "type": "unipolar"},
+    "direct_rules": {
+      "symbol_chance": 1
+    },
+    "symbols": {
+      "love": 1
+    }
+  },
+  "student": {
+    "meta_data": {"label": "Student", "label_sr": "Studentska", "type": "unipolar"},
+    "direct_rules": {
+      "symbol_chance": 1
+    },
+    "symbols": {
+      "student": 1
+    }
+  },
+  "scandinavian": {
+    "meta_data": {"label": "Nordic", "label_sr": "Nordijska", "type": "unipolar"},
+    "layout": {
+      "nordic_cross": 1,
+      "cross": 0.5,
+      "saltire": 0.5,
+      "unicolor": 0.4,
+      "canton_cross": 0.2
+    },
+    "colors": {
+      "blue": 1,
+      "white": 1,
+      "red": 1,
+      "yellow": 0.5,
+      "black": 0.5
+    },
+    "symbols": {
+      "nordic": 1
+    }
+  },
+  "antivax": {
+    "meta_data": {"label": "Antivax", "label_sr": "Antivakserska", "type": "unipolar"},
+    "symbols": {
+      "antivax": 1,
+      "covid": 1
+    },
+    "direct_rules": {
+      "symbol_chance": 1
+    }
+  },
+  "pirate": {
+    "meta_data": {"label": "Pirate", "label_sr": "Gusarska", "type": "unipolar"},
+    "colors": {
+      "black": 1,
+      "white": 1,
+      "red": -1,
+      "orange": -1,
+      "yellow": -1,
+      "pink": -1,
+      "blue": -1,
+      "green": -1,
+      "purple": -1
+    },
+    "layout": {
+      "unicolor": 1
+    },
+    "symbols": {
+      "pirate": 1
+    },
+    "direct_rules": {
+      "symbol_chance": 1
+    }
+  },
+  "arab": {
+    "meta_data": {"label": "Arab", "label_sr": "Arapska", "type": "unipolar"},
+    "colors": {
+      "green": 1,
+      "white": 1,
+      "red": 1,
+      "black": 1
+    },
+    "layout": {
+      "unicolor": 1,
+      "chevron": 1,
+      "tricolor_horizontal": 1
+    },
+    "symbols": {
+      "islam": 0.8,
+      "arab": 1
+    }
+  },
+  "eco": {
+    "meta_data": {"label": "Eco", "label_sr": "Ekološka", "type": "unipolar"},
+    "layout": {
+      "unicolor": 0.6
+    },
+    "colors": {
+      "green": 1,
+      "yellow": 0.5
+    },
+    "symbols": {
+      "eco": 1
+    }
+  },
+  "yugoslav": {
+    "meta_data": {"label": "Yugoslav", "label_sr": "Jugoslovenska", "type": "unipolar"},
+    "layout": {
+      "unicolor": 0.8,
+      "sunburst": 0.2,
+      "tricolor_horizontal": 1
+    },
+    "colors": {
+      "red": 1,
+      "blue": 1,
+      "white": 1,
+      "yellow": 0.2
+    },
+    "symbols": {
+      "yugoslav": 1,
+      "socialism": 0.5,
+      "communism": 0.5,
+      "balkan": 0.3
+    }
+  },
+  "hindu": {
+    "meta_data": {"label": "Hindu", "label_sr": "Indijska", "type": "unipolar"},
+    "layout": {
+      "unicolor": 0.5,
+      "tricolor_horizontal": 0.5
+    },
+    "colors": {
+      "orange": 1,
+      "red": 0.5,
+      "yellow": 1,
+      "white": 0.3
+    },
+    "symbols": {
+      "hindu": 1,
+      "buddhism": 1
+    }
+  },
+  "east_asian": {
+    "meta_data": {"label": "East Asian", "label_sr": "Istočnoazijska", "type": "unipolar"},
+    "layout": {
+      "unicolor": 0.5,
+      "sunburst": 0.5
+    },
+    "colors": {
+      "orange": 1,
+      "red": 1,
+      "white": 1,
+      "black": 0.3,
+      "blue": 0.9
+    },
+    "symbols": {
+      "buddhism": 1,
+      "east_asian": 1,
+      "chinese": 1
+    }
+  },
+  "libertarian": {
+    "meta_data": {"label": "Libertarian", "label_sr": "Libertarijanska", "type": "unipolar"},
+    "layout": {
+      "unicolor": 1,
+      "bicolor_diagonal_left": 1,
+      "bicolor_diagonal_right": 1,
+      "bend_left": 0.2,
+      "bend_right": 0.2
+    },
+    "colors": {
+      "yellow": 1,
+      "black": 1
+    },
+    "symbols": {
+      "libertarian": 1,
+      "liberal": 0.8,
+      "anarchism": 0.8,
+      "pirate": 0.7,
+      "crypto": 0.8
+    },
+     "direct_rules": {
+      "symbol_chance": 0.75
+    }
+  },
+  "balkan": {
+    "meta_data": {"label": "Balkan", "label_sr": "Balkanska", "type": "unipolar"},
+    "layout": {
+      "tricolor_horizontal": 1,
+      "unicolor": 1,
+      "bosnian": 0.7,
+      "quadrisection": 0.8,
+      "sunburst": 0.5,
+      "stripes_horizontal": 0.5,
+      "bicolor_diagonal_left": 1,
+      "bicolor_diagonal_right": 1
+    },
+    "colors": {
+      "red": 1,
+      "white": 1,
+      "blue": 1,
+      "yellow": 1,
+      "black": 0.5
+    },
+    "symbols": {
+      "balkan": 1,
+      "yugoslav": 1,
+      "star": 1
+    },
+     "direct_rules": {
+      "symbol_chance": 0.8
+    }
+  },
+  "incel": {
+    "meta_data": {"label": "Incel", "label_sr": "Inselska", "type": "unipolar"},
+    "colors": {
+      "black": 1,
+      "white": 1,
+      "gray": 1,
+      "red": -1,
+      "orange": -1,
+      "yellow": -1,
+      "pink": -1,
+      "blue": -1,
+      "green": -1,
+      "purple": -1
+    },
+    "layout": {
+      "unicolor": 1,
+      "stripes_vertical": 0.9,
+      "tricolor_vertical": 1,
+      "stripes_horizontal": 0.3
+    },
+    "symbols": {
+      "incel": 1,
+      "memetic": 0.5
+    },
+    "direct_rules": {
+      "symbol_chance": 1,
+      "alternating_colors_chance": 0.1
+    }
+  },
+  "bosnian": {
+    "meta_data": {"label": "Bosnian", "label_sr": "Bosanska", "type": "unipolar"},
+    "layout": {
+      "bosnian": 1
+    },
+    "colors": {
+      "blue": 1,
+      "yellow": 1,
+      "white": 1,
+      "green": 0.4,
+      "red": 0.4
+    },
+    "symbols": {
+      "bosnian": 1,
+      "balkan": 0.5,
+      "yugoslav": 0.5,
+      "star": 1
+    }
+  },
+  "american": {
+    "meta_data": {"label": "American", "label_sr": "Američka", "type": "unipolar"},
+    "layout": {
+      "american": 1,
+      "stripes_horizontal": 0.5
+    },
+    "colors": {
+      "red": 1,
+      "white": 1,
+      "blue": 1
+    },
+    "symbols": {
+      "american": 1,
+      "star": 1,
+      "corporate": 1,
+      "capitalism": 1,
+      "south_american": 0.5,
+      "hispanic": 0.5
+    },
+     "direct_rules": {
+      "symbol_chance": 0.8
+    }
+  },
+  "meme": {
+    "meta_data": {"label": "Meme", "label_sr": "Internet-mimovska", "type": "unipolar"},
+    "direct_rules": {
+      "symbol_chance": 1
+    },
+    "symbols": {
+      "memetic": 1,
+      "internet": 1,
+      "meme": 1,
+      "fun": 1
+    }
+  }
+}

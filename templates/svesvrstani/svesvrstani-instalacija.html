@@ -1,0 +1,84 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        #flag {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+    </style>
+
+    <link rel="shortcut icon" href="#">
+
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        let parameters = JSON.parse({{ params|tojson }});
+        let appText = {{ lp|tojson }};
+    </script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/canvg.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/d3.min.js') }}"></script>
+
+    {#    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chosen.jquery.min.js') }}"></script>#}
+    {#    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chosen.proto.min.js') }}"></script>#}
+    <script type="text/javascript" src="{{ url_for('static', filename='space/svesvrstani/instalacija.js') }}"></script>
+
+    <title>Svesvrstani</title>
+
+</head>
+<body>
+
+<main>
+
+    <div id="flag">
+        <svg id="flag-svg" viewBox="0 0 150 100" preserveAspectRatio="xMidYMid meet">
+        </svg>
+    </div>
+
+</main>
+
+</body>
+</html>

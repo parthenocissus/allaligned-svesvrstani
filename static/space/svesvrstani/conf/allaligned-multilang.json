@@ -1,0 +1,168 @@
+{
+  "en_params": {
+    "myflag": {
+      "main_title": "All-Aligned",
+      "author_address": "/work/about",
+      "main_tagline_h1": "Random flag generator <br class='wide'>for infinite identity building",
+      "main_tagline_h2": "<a href='/all-aligned/concept' target='_blank'>The All-Aligned</a> is a digital art project by <a href='/work/about' target='_blank'>Uroš Krčadinac</a>. An open source AI system for automated vexillology, it visualises the fractal-like fragmentary nature of our digital condition and raises questions about the society where identity creation is mediated by Big Tech.",
+      "main_button": "Generate a flag!",
+      "addresses": {
+        "nas": "/svesvrstani",
+        "eng": "/all-aligned"
+      },
+      "menu": {
+        "base": {
+          "name": "All-Aligned", "address": "/all-aligned"
+        },
+        "home": {
+          "name": "Home", "address": "/home"
+        },
+        "concept": {
+          "name": "Concept", "address": "/concept"
+        },
+        "generator": {
+          "name": "Generator", "address": "/generator", "full_name": "Flag Generator"
+        },
+        "exhibitions": {
+          "name": "Exhibitions", "address": "/exhibitions"
+        },
+        "essays": {
+          "name": "Essays", "address": "/essays"
+        },
+        "press": {
+          "name": "Press", "address": "/press"
+        },
+        "code": {
+          "name": "Open Source", "address": "/code"
+        },
+        "merch": {
+          "name": "Support Us", "address": "/support"
+        }
+      },
+      "lang_info": {
+        "counter_lang": "/svesvrstani",
+        "lang1": "Naš",
+        "lang2": "Eng",
+        "tooltip": "Promeni jezik"
+      },
+      "media_path": "space/svesvrstani/media/",
+      "description": "What does your personal flag look like? The one you identify with, the banner of you as a person. Make it with our all-aligned software generator of infinitely different flags and micro-identities.",
+      "desc_generator": "How does a flag you would stand under look like? Generate and choose such a flag using our All-Aligned software generator of endlessly different flags and microidentites.",
+      "instruction_alt": "Choose parameters for generative flag design. Max 7.",
+      "instruction": "Choose parameters for generative flag design. Max 7.",
+      "instruction2": "Set parameter values:",
+      "generate": "Generate!",
+      "institution": "DKSG, Belgrade",
+      "slider_label": "label",
+      "title": "My Flag",
+      "subtitle": "Hey! We are making an exhibition of student flags in the Student City Cultural Center. What does your personal flag look like? Make it with our Web app.",
+      "params_desc": "You can change design parameters for the flag generation — or just leave their default values. For any parameter values, the app can generate an infinite number of flag designs.",
+      "params_title": "Sliders with parameter values:",
+      "generate_button": "Generate a flag",
+      "generate_again_button": "Generate again,<br>this one is not mine.",
+      "continue_button": "That's it, baby!<br>My flag ♡",
+      "congrats1": "Congrats!",
+      "congrats2": "Now you have your own personal flag.",
+      "quest_intro": "Before you download the flag, please answer 3 questions. Your answer can come in one word, or in a form of a short story.",
+      "quest1": "1. Why do you feel this particular flag is yours?",
+      "quest2": "2. What's bothering you right now? And what makes you happy?",
+      "quest3": "3. What do you want to become?",
+      "quest_email": "Please enter your email address so we can invite you to the workshop and exhibition.",
+      "download_button": "Download Your Flag",
+      "failed": "Please fill in all the text fields!<br>Put at least one word.",
+      "checkbox_note": "I agree that the photograph of me with the flag can be used for the exhibition. (This only applies to those who complete the questionnaire on the spot, in cooperation with our team.)",
+      "production": "Production: Student City Cultural Center (DKSG), Belgrade, 2022.",
+      "support": "Click on a flag to save it as SVG and PNG file. If you wish to support our project, send us the SVG via email and <a href='/all-aligned/support' target='_blank'>order a physical flag as a unique art object</a>.",
+      "downloader": {
+        "line1": "Great one!",
+        "line2": "You can save it as a SVG or a PNG file.",
+        "line3": "If you wish to support our project (or just want to have this flag as a physical object so you can hang it on your bookshelf), send us the SVG via email (uros@krcadinac.com) and order a flag as an unique artwork.",
+        "line4": "Check out more information about <a href='/all-aligned/support' target='_blank'>buying an AI art flag from us</a>.",
+        "exit": "Exit"
+      }
+    }
+  },
+  "sr_params": {
+    "myflag": {
+      "main_title": "Svesvrstani",
+      "author_address": "/rad/bio",
+      "main_tagline_h1": "Generator nasumičnih zastava <br class='wide'>za kreiranje beskonačno identiteta",
+      "main_tagline_h2": "<a href='/svesvrstani/concept' target='_blank'>Svesvrstani</a> su digitalno-umetnički projekat <a href='/rad/bio' target='_blank'>Uroša Krčadinca</a>. Kao AI sistem otvorenog koda za automatizovanu veksilologiju, Svesvrstani vizuelizuju fraktalnu i fragmentarnu prirodu naših digitalnih života i postavljaju pitanja o društvu čije identitete oblikuju algoritmi.",
+      "addresses": {
+        "nas": "/svesvrstani",
+        "eng": "/all-aligned"
+      },
+      "main_button": "Generiši zastavu!",
+      "menu": {
+        "base": {
+          "name": "Svesvrstani", "address": "/svesvrstani"
+        },
+        "concept": {
+          "name": "Koncept", "address": "/concept"
+        },
+        "home": {
+          "name": "Početna", "address": "/home"
+        },
+        "generator": {
+          "name": "Generator", "address": "/generator", "full_name": "Generator zastava"
+        },
+        "exhibitions": {
+          "name": "Izložbe", "address": "/exhibitions"
+        },
+        "essays": {
+          "name": "Eseji", "address": "/essays"
+        },
+        "press": {
+          "name": "U medijima", "address": "/press"
+        },
+        "code": {
+          "name": "Otvoren kôd", "address": "/code"
+        },
+        "merch": {
+          "name": "Podržite nas", "address": "/support"
+        }
+      },
+      "lang_info": {
+        "counter_lang": "/all-aligned",
+        "lang1": "Eng",
+        "lang2": "Naš",
+        "tooltip": "Change language"
+      },
+      "media_path": "space/svesvrstani/media/",
+      "description": "Kako izgleda tvoja zastava, ona sa kojom se identifikuješ, barjak tebe kao osobe? Napravi je pomoću svesvrstanog softverskog generatora beskonačno različitih zastava i mikroidentiteta.",
+      "desc_generator": "Kako izgleda zastava ispod koje biste stali? Napravite takvu zastavu pomoću našeg svesvrstanog softverskog generatora beskonačno različitih zastava i mikroidentiteta.",
+      "instruction": "Izaberi parametre koji utiču na dizajn zastave. Maksimalno sedam.",
+      "instruction_alt": "Izaberite parametre koji utiču na dizajn zastave. Maksimalno sedam.",
+      "instruction2": "Podesi vrednosti parametara:",
+      "generate": "Generiši!",
+      "institution": "DKSG, Beograd",
+      "slider_label": "label_sr",
+      "title": "Moja Zastava",
+      "subtitle": "Hej! Pravimo izložbu zastava studenata u Domu kulture studentski grad. Kako izgleda baš tvoja zastava? Napravi je pomoću našeg programa.",
+      "params_desc": "Možeš da izabereš parametre čije vrednosti utiču na izgled zastave. Možeš i da ostaviš neutralno, po difoltu. Za bilo koje parametre, program generiše beskonačno različitih zastava.",
+      "params_title": "Slajder za parametre:",
+      "generate_button": "Generiši zastavu",
+      "generate_again_button": "Generiši novu,<br>ova nije moja.",
+      "continue_button": "To je to!<br>Moja zastava ♡",
+      "congrats1": "Čestitamo!",
+      "congrats2": "Sada imaš svoju zastavu.",
+      "quest_intro": "Pre nego što preuzmeš zastavu, molimo te da odgovoriš na 3 pitanja. Možeš da napišeš jednu reč, možeš i            kratku priču.",
+      "quest1": "1. Zašto je baš ova zastava tvoja?",
+      "quest2": "2. Šta te trenutno nervira? A šta te raduje?",
+      "quest3": "3. Šta želiš da postaneš?",
+      "quest_email": "Unesi svoju imejl adresu da bismo mogli da te pozovemo na radionicu i izložbu.",
+      "download_button": "Preuzmi svoju zastavu",
+      "failed": "Molimo te da popuniš sva polja! Makar jednom rečju.",
+      "checkbox_note": "Saglasan sam da se fotografija mene sa zastavom upotrebi za izložbu. (Ovo važi samo za one koji upitnik popunjavaju na licu mesta, u saradnji sa našom ekipom.)",
+      "production": "Produkcija: Dom kulture Studentski grad, 2022.",
+      "support": "Kliknite na zastavu da biste je sačuvali kao SVG i PNG. Ako želite da podržite projekat, pošaljite nam SVG fajl na mejl i naručite da vam <a href='/svesvrstani/support' target='_blank'>izradimo zastavu kao unikatan umetnički predmet</a>.",
+      "downloader": {
+        "line1": "Odlična!",
+        "line2": "Možete je sačuvati kao SVG ili PNG fajl.",
+        "line3": "Ako želite da podržite naš projeat (ili prosto želite da imate ovu zastavu kao fizički objekat koji ćete okačiti na policu), pošaljite nam SVG fajl preko mejla (uros@krcadinac.com) i naručite zastavu kao unikatan umetnički rad.",
+        "line4": "Pogledajte više informacija o <a href='/svesvrstani/support' target='_blank'>kupovini zastave</a>.",
+        "exit": "Izađi"
+      }
+    }
+  }
+}

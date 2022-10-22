@@ -1,0 +1,110 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+{% extends "svesvrstani/svesvrstani-base.html" %}
+
+{% block head %}
+
+    <meta property="og:title" content="{{ lp.main_title }} → {{ params.title.name }}">
+    <meta property="og:description" content="{{ params.lead|striptags }}">
+    {% set main_img_path = 'space/svesvrstani/media/og-image.jpg' %}
+    <meta property="og:image" content="{{ 'https://krcadinac.com/static/' ~ main_img_path }}">
+    <meta property="og:image:secure_url" content="{{ url_for('static', filename=main_img_path) }}"/>
+    <meta property="og:url" content="{{ 'https://krcadinac.com' ~ lp.menu.base.name }}">
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@krcadinac"/>
+    <meta name="twitter:title" content="{{ lp.main_title }} → {{ params.title.name }}"/>
+    <meta name="twitter:description" content="{{ params.lead|striptags }}"/>
+    <meta name="twitter:image" content="{{ url_for('static', filename=main_img_path) }}"/>
+
+    <title>{{ lp.main_title }} → {{ params.title.name }}</title>
+
+{% endblock %}
+
+{% set lang_link = lp.lang_info.counter_lang ~ params.address %}
+{#{% set lang_link = lp.lang_info.counter_lang %}#}
+{% block langlinkage %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block body %}
+
+    <main class="list-page">
+
+        <div class="list-heading">
+            <div class="breadcrumbs">
+                <a href="{{ lp.menu.base.address }}">{{ lp.main_title }}</a> →
+            </div>
+            <h1 class="list-h">{{ params.title.name }}</h1>
+            <h2 class="list-h">{{ params.lead|safe }}</h2>
+        </div>
+
+        <div class="list-content">
+
+            <h1 class="subgroup-h">{{ params.subtitles.first }}</h1>
+
+            <div class="page-list">
+                {% for p in list.first %}
+                    {% set lnk = lp.menu.base.address ~ p.address  %}
+                    <a href="{{ lnk }}" class="single-item-anchor">
+                        <div class="single-item">
+                            {% set st = p.title.subtitle ~ ", " ~ p.year %}
+                            {% set item_image = "space/svesvrstani/media/thumbs/" ~ p.thumb %}
+                            <div class="item-image">
+                                <img src="{{ url_for('static', filename=item_image) }}" alt="svesvrstani all-aligned">
+                            </div>
+                            <div class="item-title">{{ p.title.name }}</div>
+                            <div class="item-subtitle">{{ st }}</div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+
+            <h1 class="subgroup-h">{{ params.subtitles.second }}</h1>
+
+            <div class="page-list">
+                {% for p in list.second %}
+                    {% set lnk = lp.menu.base.address ~ p.address  %}
+                    <a href="{{ lnk }}" class="single-item-anchor">
+                        <div class="single-item">
+                            {% set st = p.title.subtitle ~ ", " ~ p.year %}
+                            {% set item_image = "space/svesvrstani/media/thumbs/" ~ p.thumb %}
+                            <div class="item-image">
+                                <img src="{{ url_for('static', filename=item_image) }}" alt="svesvrstani all-aligned">
+                            </div>
+                            <div class="item-title">{{ p.title.name }}</div>
+                            <div class="item-subtitle">{{ st }}</div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </main>
+
+{% endblock %}

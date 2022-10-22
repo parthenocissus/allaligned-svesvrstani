@@ -1,0 +1,505 @@
+{
+  "en_params": {
+    "bntstn": {
+      "title": "Interactive Atlas",
+      "lang": "e",
+      "menu": {
+        "main": "Main Menu",
+        "editions": "Bantustan Book Editions",
+        "chapters": "Available Chapter Maps",
+        "others": "Other Maps & Graphics",
+        "prints_tooltip": "Explore this map",
+        "submenu": {
+          "home": "Home",
+          "home_link": "home",
+          "prints": "Prints",
+          "prints_link": "prints",
+          "eng_ed": "English",
+          "srb_ed": "Serbocroatian"
+        },
+        "map_link": "map"
+      },
+      "chapter": "Chapter",
+      "h3_chapter": {
+        "part1": "Chapter ",
+        "part2": ""
+      },
+      "open_txt": "Open the map: ",
+      "open_next_txt": "Next map: ",
+      "open_prev_txt": "Previous map: ",
+      "map_tooltip_txt": "This chapter is still not available",
+      "footer_txt": "You like the map? See how <a href='/bantustan-interactive-atlas/prints/'>you can get it</a>.",
+      "note_tooltip": "What does this part of the mape mean? Read the artist note.",
+      "chapter_tooltip": {
+        "part1": "Load the PDF of the book and open the ",
+        "part2": " story in the chapter "
+      }
+    },
+    "lang": "en",
+    "paths": {
+      "home": "/work/",
+      "projects": "/work/projects/",
+      "category": "category/",
+      "role": "role/",
+      "medium": "medium/",
+      "about": "about/"
+    },
+    "menu": {
+      "title": "Menu",
+      "social": "Social"
+    },
+    "menu_items": [
+      {
+        "title": "Home",
+        "link": "/work"
+      },
+      {
+        "title": "Projects",
+        "link": "/work/projects"
+      },
+      {
+        "title": "Writing",
+        "link": "/work/writing"
+      },
+      {
+        "title": "Teaching",
+        "link": "/work/teaching"
+      },
+      {
+        "title": "Speaking",
+        "link": "/work/speaking"
+      },
+      {
+        "title": "Press",
+        "link": "/work/press"
+      },
+      {
+        "title": "Notebook",
+        "link": "/work/notebook"
+      },
+      {
+        "title": "About",
+        "link": "/work/about"
+      }
+    ],
+    "lang_menu": {
+      "active_title": "eng",
+      "link_title": "naš",
+      "base_link": "/rad"
+    },
+    "bio": {
+      "homepage": "<a href='/work/about/'>Uroš Krčadinac</a> (b. 1984) is a Belgrade-based <br class='bio-break'>digital artist, technologist, writer, and educator <br class='bio-break'>who <span id='creates-verb'>creates</span> <span id='creates-what'>multidisciplinary projects</span>."
+    },
+    "page_title": {
+      "homepage": " → Digital Art, Writing, Teaching",
+      "about": "About"
+    },
+    "tooltip": {
+      "linechart": "Project Timeline ↓ Go To Presentations",
+      "linechart_index": "Timeline of projects in category: ",
+      "linechart_about": "Timeline of all projects",
+      "bio_index": "Biography",
+      "projects_index": "All projects",
+      "bio_link_index": "Projects in category: ",
+      "projects_index_general": "Projects"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "project_captions": {
+      "lang_link": "/rad/projekti/",
+      "categories_title": "Project Categories",
+      "categories": "Categories",
+      "presentations": "Presentations",
+      "role": "Role",
+      "medium": "Medium",
+      "collaborators": "Collaborators",
+      "publications": "Publications",
+      "awards": "Awards",
+      "press": "Press",
+      "gallery_tooltip": {
+        "start": "Open Gallery",
+        "end": "Images"
+      },
+      "polarchart": {
+        "visual": {
+          "head": "visual",
+          "sub": ["drawing", "æsthetics", "shape"]
+        },
+        "textual": {
+          "head": "textual",
+          "sub": ["writing", "(po)ethics", "meaning"]
+        },
+        "digital": {
+          "head": "digital",
+          "sub": ["coding", "logic", "structure"]
+        }
+      }
+    },
+    "pages_captions": {
+      "about_lang_link": "/rad/bio/",
+      "writing_lang_link": "/rad/tekstovi/",
+      "teaching_lang_link": "/rad/edukacija/",
+      "speaking_lang_link": "/rad/nastupi/",
+      "press_lang_link": "/rad/mediji/",
+      "notes_lang_link": "/rad/sveska/"
+    },
+    "roles": [
+      {
+        "id": "artist",
+        "title": "Artist"
+      },
+      {
+        "id": "writer",
+        "title": "Writer"
+      },
+      {
+        "id": "programmer",
+        "title": "Programmer"
+      },
+      {
+        "id": "educator",
+        "title": "Educator + Workshop Creator"
+      },
+      {
+        "id": "designer",
+        "title": "Designer"
+      },
+      {
+        "id": "researcher",
+        "title": "Researcher"
+      },
+      {
+        "id": "director",
+        "title": "Director"
+      },
+      {
+        "id": "animator",
+        "title": "Animator"
+      },
+      {
+        "id": "cartographer",
+        "title": "Cartographer"
+      },
+      {
+        "id": "maker",
+        "title": "Maker"
+      },
+      {
+        "id": "publisher",
+        "title": "Publisher"
+      }
+    ],
+    "mediums": [
+      {
+        "id": "print",
+        "title": "Print"
+      },
+      {
+        "id": "animation",
+        "title": "Animation"
+      },
+      {
+        "id": "software",
+        "title": "Software"
+      },
+      {
+        "id": "installation",
+        "title": "Installation"
+      },
+      {
+        "id": "performance",
+        "title": "Performance"
+      },
+      {
+        "id": "dataviz",
+        "title": "Data Visualization"
+      },
+      {
+        "id": "map",
+        "title": "Map"
+      },
+      {
+        "id": "book",
+        "title": "Book"
+      },
+      {
+        "id": "video",
+        "title": "Video"
+      },
+      {
+        "id": "workshop",
+        "title": "Workshop"
+      }
+    ],
+    "tag_titles": {
+      "role": "Role",
+      "medium": "Medium",
+      "category": "Category",
+      "all": "All Categories",
+      "all_title": "All Projects"
+    },
+    "notes_data": {
+      "name": "Notebook",
+      "path": "/work/notebook/",
+      "writing_title": "Fresh Notes",
+      "error": "Ova beleška ne postoji na engleskom. <br>This note doesn't exist in English. <br>Here are other notes in English:",
+      "desc": "A collection of texts, sketches and ideas not yet turned into <a href='/work/projects/'>projects</a> nor <a href='/work/writing/'>publications</a>. Not a blog."
+    }
+  },
+  "sh_params": {
+    "bntstn": {
+      "title": "Interaktivni atlas",
+      "lang": "s",
+      "menu": {
+        "main": "Glavni meni",
+        "editions": "Izdanja knjige Bantustan",
+        "chapters": "Mape izabranih poglavlja",
+        "others": "Ostale mape i grafike",
+        "prints_tooltip": "Istraži mapu",
+        "submenu": {
+          "home": "Početna",
+          "home_link": "pocetna",
+          "prints": "Printovi",
+          "prints_link": "printovi",
+          "eng_ed": "Englesko",
+          "srb_ed": "Domaće"
+        },
+        "map_link": "mapa"
+      },
+      "chapter": "poglavlje",
+      "h3_chapter": {
+        "part1": "",
+        "part2": " poglavlje"
+      },
+      "open_txt": "Otvori mapu: ",
+      "open_next_txt": "Sledeća mapa: ",
+      "open_prev_txt": "Prethodna mapa: ",
+      "map_tooltip_txt": "Ovo poglavlje još uvek nije dostupno",
+      "footer_txt": "Dopada vam se mapa? Možete je <a href='/bantustan-interactive-atlas/printovi/'>naručiti</a>.",
+      "footer_txt_orig": "Dopada vam se ova mapa?<br>Možete je naručiti kao <a href='/bantustan-interactive-atlas/printovi/'>štampanu grafiku</a>.<br>Ona je deo knjige <em>Bantustan: atlas jednog</em><br><em>putovanja</em> (<a href='https://krcadinac.com/rad/projekti/bantustan-book/' target='_blank'>domaće</a> i <a href='https://www.amazon.com/Bantustan-African-Journey-Lazar-Pascanovic/dp/B093B4M61M/' target='_blank'>englesko</a> izdanje).",
+      "note_tooltip": "Šta predstavlja ovaj deo mape? Vidi belešku.",
+      "chapter_tooltip": {
+        "part1": "Učitaj knjigu u PDFu i otvori priču ",
+        "part2": " u poglavlju "
+      }
+    },
+    "lang": "sh",
+    "paths": {
+      "home": "/rad/",
+      "projects": "/rad/projekti/",
+      "category": "category/",
+      "role": "role/",
+      "medium": "medium/",
+      "about": "bio/"
+    },
+    "menu": {
+      "title": "Sadržaj",
+      "social": "Mreže"
+    },
+    "menu_items": [
+      {
+        "title": "Početna",
+        "link": "/rad"
+      },
+      {
+        "title": "Projekti",
+        "link": "/rad/projekti"
+      },
+      {
+        "title": "Tekstovi",
+        "link": "/rad/tekstovi"
+      },
+      {
+        "title": "Edukacija",
+        "link": "/rad/edukacija"
+      },
+      {
+        "title": "Nastupi",
+        "link": "/rad/nastupi"
+      },
+      {
+        "title": "Mediji",
+        "link": "/rad/mediji"
+      },
+      {
+        "title": "Sveska",
+        "link": "/rad/sveska"
+      },
+      {
+        "title": "Biografija",
+        "link": "/rad/bio"
+      }
+    ],
+    "lang_menu": {
+      "active_title": "naš",
+      "link_title": "eng",
+      "base_link": "/work"
+    },
+    "bio": {
+      "homepage": "<a href='/rad/bio/'>Uroš Krčadinac</a> (1984) je <br class='bio-break-footer-sh'>digitalni umetnik, <br class='bio-break'> programer, autor <br class='bio-break-footer-sh'>i edukator koji <span id='creates-verb'>kreira</span> <br class='bio-break'><span id='creates-what'>transdisciplinarne projekte</span>."
+    },
+    "page_title": {
+      "homepage": " → digitalni umetnik, programer, autor i edukator",
+      "about": "Biografija"
+    },
+    "tooltip": {
+      "linechart": "Vremenska linija projekta ↓ vidi prezentacije",
+      "linechart_index": "Vremenska linija projekata u kategoriji: ",
+      "linechart_about": "Vremenska linija svih projekata",
+      "linechart_about": "Vremenska linija svih projekata",
+      "bio_index": "Biografija",
+      "projects_index": "Svi projekti",
+      "bio_link_index": "Projekti u kategoriji: ",
+      "projects_index_general": "Projekti"
+    },
+    "contact": {
+      "title": "Kontakt"
+    },
+    "project_captions": {
+      "lang_link": "/work/projects/",
+      "categories_title": "Kategorije",
+      "categories": "Kategorije",
+      "presentations": "Prezentacije",
+      "role": "Uloga",
+      "medium": "Medij",
+      "collaborators": "Saradnici",
+      "publications": "Publikacije",
+      "awards": "Nagrade",
+      "press": "U medijima",
+      "gallery_tooltip": {
+        "start": "Otvori galeriju",
+        "end": "sl."
+      },
+      "polarchart": {
+        "textual": "tekstualno",
+        "digital": "digitalno",
+        "visual": "vizuelno"
+      },
+      "polarchart": {
+        "visual": {
+          "head": "vizuelno",
+          "sub": ["crtanje", "estetika", "oblik"]
+        },
+        "textual": {
+          "head": "tekstualno",
+          "sub": ["pisanje", "(po)etika", "značenje"]
+        },
+        "digital": {
+          "head": "digitalno",
+          "sub": ["programiranje", "logika", "struktura"]
+        }
+      }
+    },
+    "pages_captions": {
+      "about_lang_link": "/work/about/",
+      "writing_lang_link": "/work/writing/",
+      "teaching_lang_link": "/work/teaching/",
+      "speaking_lang_link": "/work/speaking/",
+      "press_lang_link": "/work/press/",
+      "notes_lang_link": "/work/notebook/"
+    },
+    "roles": [
+      {
+        "id": "artist",
+        "title": "Umetnik"
+      },
+      {
+        "id": "writer",
+        "title": "Pisac"
+      },
+      {
+        "id": "programmer",
+        "title": "Programer"
+      },
+      {
+        "id": "educator",
+        "title": "Edukator"
+      },
+      {
+        "id": "designer",
+        "title": "Dizajner"
+      },
+      {
+        "id": "researcher",
+        "title": "Istraživač"
+      },
+      {
+        "id": "animator",
+        "title": "Animator"
+      },
+      {
+        "id": "director",
+        "title": "Reditelj"
+      },
+      {
+        "id": "cartographer",
+        "title": "Kartograf"
+      },
+      {
+        "id": "maker",
+        "title": "Mejker"
+      },
+      {
+        "id": "publisher",
+        "title": "Izdavač"
+      }
+    ],
+    "mediums": [
+      {
+        "id": "print",
+        "title": "Print"
+      },
+      {
+        "id": "animation",
+        "title": "Animacija"
+      },
+      {
+        "id": "software",
+        "title": "Softver"
+      },
+      {
+        "id": "installation",
+        "title": "Instalacija"
+      },
+      {
+        "id": "performance",
+        "title": "Performans"
+      },
+      {
+        "id": "dataviz",
+        "title": "Vizuelizacija podataka"
+      },
+      {
+        "id": "map",
+        "title": "Mapa"
+      },
+      {
+        "id": "book",
+        "title": "Knjiga"
+      },
+      {
+        "id": "video",
+        "title": "Video"
+      },
+      {
+        "id": "workshop",
+        "title": "Radionica"
+      }
+    ],
+    "tag_titles": {
+      "role": "Uloga",
+      "medium": "Medij",
+      "category": "Kategorija",
+      "all": "Sve kategorije",
+      "all_title": "Svi projekti"
+    },
+    "notes_data": {
+      "name": "Sveska",
+      "path": "/rad/sveska/",
+      "writing_title": "Sveže beleške",
+      "error": "This note exists only in English. <br>Ova beleška postoji samo na engleskom. <br>Evo beležaka na našem jeziku:",
+      "desc": "Zbirka tekstova, skica i ideja koje se još uvek nisu uobličile u <a href='/rad/projekti/'>projekte</a> ili <a href='/rad/tekstovi/'>publikacije</a>. Nije blog."
+    }
+  }
+}

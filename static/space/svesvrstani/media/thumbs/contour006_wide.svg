@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 600 200" xml:space="preserve">
+<g id="Layer_1_1_">
+	<g>
+		<rect x="0.5" y="0.5" fill="#FFFFFF" width="599" height="199"/>
+		<path d="M599,1v198H1V1H599 M600,0H0v200h600V0L600,0z"/>
+	</g>
+</g>
+<g id="Layer_2_1_">
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="100.3" x2="600.7" y2="100.3"/>
+	<circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="51" cy="49.7" r="32"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="102.5" y1="1.1" x2="102.5" y2="199.4"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="102.5" y1="200" x2="507.2" y2="0"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="196" y1="200" x2="600.7" y2="0"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="298.9" y1="200" x2="703.6" y2="0"/>
+</g>
+</svg>

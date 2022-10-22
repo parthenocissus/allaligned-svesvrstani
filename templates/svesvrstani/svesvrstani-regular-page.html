@@ -1,0 +1,228 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+{% extends "svesvrstani/svesvrstani-base.html" %}
+
+{% block head %}
+
+    <meta property="og:title" content="{{ lp.main_title }} → {{ page.title.name }}">
+    <meta property="og:description" content="{{ lp.main_tagline_h2|striptags }}">
+    <meta property="og:image" content="{{ url_for('static', filename=page.image.main) }}">
+    <meta property="og:image:secure_url" content="{{ url_for('static', filename=page.image.main) }}"/>
+    <meta property="og:url" content="{{ 'https://krcadinac.com' ~ lp.menu.base.name ~ page.address }}">
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@krcadinac"/>
+    <meta name="twitter:title" content="{{ lp.main_title }} → {{ page.title.name }}"/>
+    <meta name="twitter:description" content="{{ lp.main_tagline_h2|striptags }}"/>
+    <meta name="twitter:image" content="{{ url_for('static', filename=page.image.main) }}"/>
+
+    <title>{{ lp.main_title }} → {{ page.title.name }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/photoswipe.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/default-skin.css') }}">
+
+    <script src="{{ url_for('static', filename='js/lib/photoswipe.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lib/photoswipe-ui-default.min.js') }}"></script>
+
+    <style>
+
+        .pswp__counter {
+            font-family: "Metropolis-Regular", monospace;
+        }
+
+        .pswp__caption__center {
+            font-family: "Metropolis-Regular", monospace;
+            color: white;
+            max-width: 100%;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% set lang_link = lp.lang_info.counter_lang ~ page.address %}
+{#{% set lang_link = lp.lang_info.counter_lang %}#}
+{% block langlinkage %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block body %}
+
+    <main class="regular">
+
+        <div class="breadcrumbs">
+            {% if not page.parent %}
+                <a href="{{ lp.menu.base.address }}">{{ lp.main_title }}</a> →
+            {% else %}
+                {% set parent_link = lp.menu.base.address ~ page.parent.address %}
+                <a href="{{ lp.menu.base.address }}">{{ lp.main_title }}</a> →
+                <a href="{{ parent_link }}">{{ page.parent.name }}</a> → {{ page.year }}
+            {% endif %}
+        </div>
+
+        <h1 class="regular">{{ page.title.name }}</h1>
+
+        {% if page.title.subtitle is defined %}
+            <h1 class="subtitle">{{ page.title.subtitle }}</h1>
+        {% endif %}
+
+        <div class="img-container">
+            {% set img_path = lp.media_path ~ page.image.main %}
+            <img src="{{ url_for('static', filename=img_path) }}" alt="illustrastion og">
+        </div>
+
+        {{ page.content|safe }}
+
+        {% if page.gallery is defined %}
+
+            <div class="thumbs">
+                <div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    {% for d in range(page.gallery.n) %}
+                        {% set i = loop.index %}
+                        {% set img_path = "space/svesvrstani/media/" ~ page.id ~ "/"  ~ i ~ ".jpg" %}
+                        <figure class="img-figure" itemprop="associatedMedia" itemscope
+                                itemtype="http://schema.org/ImageObject"
+                                title="{{ page.gallery.caption }}">
+                            <a href="{{ url_for('static', filename=img_path) }}" data-size="{{ page.gallery.size }}"
+                               itemprop="contentUrl" data-index="{{ i }}" caption="{{ page.gallery.caption }}">
+                                <img src="{{ url_for('static', filename=img_path) }}" itemprop="thumbnail">
+                            </a>
+                        </figure>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <!-- PhotoSwipe Markup -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="pswp__bg"></div>
+                <div class="pswp__scroll-wrap">
+
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+
+                    <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar">
+                            <div class="pswp__counter"></div>
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+
+    </main>
+
+    <script>
+
+        let lightboxSetup = () => {
+
+            $('.gallery').each(function () {
+                let $pic = $(this),
+                    getItems = function () {
+                        let items = [];
+                        $pic.find('a').each(function () {
+                            let $href = $(this).attr('href'),
+                                $size = $(this).data('size').split('x'),
+                                $width = $size[0],
+                                $height = $size[1],
+                                $cap = $(this).attr('caption');
+
+                            let item = {
+                                src: $href,
+                                w: $width,
+                                h: $height,
+                                title: $cap
+                            }
+
+                            items.push(item);
+                        });
+                        return items;
+                    }
+
+                let items = getItems();
+
+                let $pswp = $('.pswp')[0];
+
+                let options = {
+                    index: 0,
+                    bgOpacity: 1,
+                    showHideOpacity: true,
+                    captionEl: true,
+                    fullscreenEl: false,
+                    zoomEl: false,
+                    shareEl: false
+                };
+
+                $pic.on('click', 'figure', function (event) {
+                    event.preventDefault();
+                    options.index = $(this).index();
+                    console.log(options);
+                    let lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                    lightBox.init();
+                });
+
+                $(".lightbox-rect").on('click', function (event) {
+                    event.preventDefault();
+                    let lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                    lightBox.init();
+                });
+
+            });
+
+        };
+
+        lightboxSetup();
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,495 @@
+/*
+All-Aligned
+Svesvrstani
+
+https://krcadinac.com/all-aligned
+
+The All-Aligned is a digital art project by Uroš Krčadinac.
+An open source AI system for automated vexillology,
+it visualises the fractal-like fragmentary nature
+of our digital condition and raises questions about
+the society where identity creation is mediated by Big Tech.
+
+Copyright (C) 2022.  Uroš Krčadinac
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+:root {
+    --header-height: 68px;
+    --footer-height: 42px;
+    --main-height: 110px;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5f5f5; /* gainsboro;  white; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: var(--header-height) calc(100vh - var(--main-height)) var(--footer-height);
+}
+
+main {
+    box-sizing: border-box;
+    height: calc(100vh - var(--main-height));
+}
+
+#main-home {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+}
+
+#main-fractals {
+    display: grid;
+    grid-template-columns: 2fr calc((100vh - var(--main-height)) * 1.5) 3fr;
+}
+
+#main-selected {
+    padding: 40px;
+    text-align: center;
+}
+
+#home-flag-space {
+    box-sizing: border-box;
+    padding: 30px 12px 12px 12px;
+}
+
+#home-flag-space #flags svg {
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+/* Spinner */
+
+#spinner {
+    display: none;
+    width: 100%;
+    height: 296px;
+    margin: 15px 0;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+#spinner img {
+    margin-top: 15vh;
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 25px 20px 10px 30px;
+    border-bottom: gainsboro 1px solid;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Metropolis-Black", sans-serif;
+    font-size: 1.5em;
+    /*padding: .1em 0 0 0;*/
+    padding: 0;
+    margin: 0;
+    /*width: 40%;*/
+}
+
+h3 {
+    font-family: "Metropolis-Regular", sans-serif;
+    font-size: 0.8em;
+    padding: .5em 0 0 0;
+    margin: 0;
+    text-align: right;
+    font-weight: normal;
+    /*width: 40%;*/
+}
+
+h3 a {
+    color: black;
+    text-decoration: none;
+    padding-right: 1em;
+}
+
+h3 a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+#whitespace {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+/* SVG */
+
+.interface-column {
+    box-sizing: border-box;
+    padding: 0 0 0 0;
+    margin: 30px 30px 40px 30px;
+    /*width: 190px;*/
+    font-family: "Metropolis-Regular", sans-serif;
+    /*font-family: "apercu-mono-medium", monospace;*/
+    font-size: 0.8em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*border-right: 1px gray solid;*/
+}
+
+#instructions {
+    padding-bottom: 30px;
+    /*justify-self: start;*/
+}
+
+/* Buttons */
+
+#buttons {
+    /*align-self: flex-end;*/
+    /*align-self: end;*/
+    /*justify-self: end;*/
+}
+
+button {
+    font-family: "Metropolis-Medium", sans-serif;
+    font-size: 1em;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.8em 1.1em;
+    text-decoration: none;
+    border: 1px lightgray solid;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #C0C0C0;
+    /*color: white;*/
+}
+
+/* Fractal Flag */
+
+#total-flag {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+}
+
+/* Filters */
+
+#left {
+    /*width: 200px;*/
+    box-sizing: border-box;
+}
+
+#config {
+    width: 100%;
+}
+
+#filters {
+    width: 100%;
+}
+
+.chosen-container-multi {
+    margin: 10px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#slider-header {
+    padding: 15px 0 10px 0;
+    visibility: hidden;
+}
+
+/* Footer */
+
+footer {
+    box-sizing: border-box;
+    font-family: "Metropolis-Regular", monospace;
+    /*font-family: "noe-display-bold", sans-serif;*/
+    /*font-weight: bold;*/
+    height: var(--footer-height);
+    font-size: 0.7em;
+    line-height: 1.5em;
+    background-color: white;
+    color: gray;
+    margin: 0;
+    padding: 0 30px;
+    border-top: 1px lightgray solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+#signature {
+    text-align: right;
+}
+
+footer div {
+    align-self: center;
+    justify-self: center;
+}
+
+/* Hamburger */
+
+header label {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 0 0;
+    width: 30px;
+    cursor: pointer;
+}
+
+header label span {
+    background: black;
+    border-radius: 1px;
+    height: 2px;
+    margin: 2px 0;
+    transition: .1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+header span:nth-of-type(1) {
+    width: 50%;
+}
+
+header span:nth-of-type(2) {
+    width: 100%;
+}
+
+header span:nth-of-type(3) {
+    width: 75%;
+}
+
+header input[type="checkbox"] {
+    display: none;
+}
+
+header input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(2px, -1px)
+}
+
+header input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+header input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(13px, -1px) rotatez(45deg);
+}
+
+/* Radio buttons */
+
+#radio-buttons {
+    padding-bottom: 10px;
+}
+
+#radio-buttons p {
+    margin: 0 0 8px 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px lightgray solid;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: gainsboro;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: darkgray;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Slider styles */
+
+#slider-group {
+    padding: 0;
+    display: grid;
+    width: 100%;
+}
+
+#slider-group label {
+    position: relative;
+    bottom: 7px;
+    padding-left: 15px;
+}
+
+.slider-div {
+    padding: 0 10px 0 0;
+}
+
+.slider-div input[type=range] {
+    height: 23px;
+    -webkit-appearance: none;
+    margin: 0 0;
+    width: 33%;
+    background-color: #f5f5f5;
+}
+
+.slider-div input[type=range]:focus {
+    outline: none;
+}
+
+.slider-div input[type=range]::-webkit-slider-runnable-track {
+    width: 50%;
+    height: 1px;
+    cursor: pointer;
+    background: darkgray;
+}
+
+.slider-div input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #D9D9D9;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+
+.slider-div input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #D6D6D6;
+}
+
+.slider-div input[type=range]::-moz-range-track {
+    width: 50%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #D6D6D6;
+    border-radius: 0px;
+    border: 0px solid #000000;
+}
+
+.slider-div input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #D9D9D9;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    /*background: #FFFFFF;*/
+    cursor: pointer;
+}
+
+.slider-div input[type=range]::-ms-track {
+    width: 50%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.slider-div input[type=range]::-ms-fill-lower {
+    background: #D6D6D6;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+.slider-div input[type=range]::-ms-fill-upper {
+    background: #D6D6D6;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+.slider-div input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #D9D9D9;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.slider-div input[type=range]:focus::-ms-fill-lower {
+    background: #D6D6D6;
+}
+
+.slider-div input[type=range]:focus::-ms-fill-upper {
+    background: #D6D6D6;
+}

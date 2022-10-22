@@ -1,0 +1,124 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+
+        @font-face {
+            font-family: "Metropolis-Black";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Black.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-Medium";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Medium.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-Regular";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Regular.woff') }}) format("woff");
+        }
+
+    </style>
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/chosen.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='space/svesvrstani/flags.css') }}">
+
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        let flagMappings = JSON.parse({{ params|tojson }});
+    </script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/d3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/canvg.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chosen.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chosen.proto.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='space/svesvrstani/interface.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='space/svesvrstani/flaglabs.js') }}"></script>
+
+    <title>{{ lp.main_title }}</title>
+
+</head>
+<body>
+
+<header>
+    {#    <label for="check">#}
+    {#        <input type="checkbox" id="check"/>#}
+    {#        <span></span>#}
+    {#        <span></span>#}
+    {#        <span></span>#}
+    {#    </label>#}
+    <h1>{{ lp.main_title|safe }}</h1>
+    <h3><a href="/svesvrstani">Srpski</a><a href="/all-aligned">English</a></h3>
+</header>
+
+<main id="main-home">
+
+    <div id="left" class="interface-column">
+        <div>
+            <div id="instructions">
+                {{ lp.description }}
+            </div>
+            <div id="filters">
+                {{ lp.instruction }}
+                <select id="choose-params" class="chosen" multiple="true" name="faculty"></select>
+                <div id="slider-header">{{ lp.instruction2 }}</div>
+                <div id="slider-group"></div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <button type="button" id="go">{{ lp.generate }}</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="home-flag-space">
+        <div id="spinner">
+            <img src="{{ url_for('static', filename='space/svesvrstani/img/spinner.gif') }}" alt="spinner">
+        </div>
+        <div id="flags"></div>
+    </div>
+
+</main>
+
+<footer>
+{#    <div id="centre">{{ lp.institution }}</div>#}
+    <div id="centre">S.U.T.R.A.</div>
+    <div id="signature">Uroš Krčadinac, 2022.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+{% extends "svesvrstani/svesvrstani-base.html" %}
+
+{% block head %}
+
+    <meta property="og:title" content="{{ lp.main_title }}">
+    <meta property="og:description" content="{{ lp.main_tagline_h2|striptags }}">
+    {% set main_img_path = 'space/svesvrstani/media/og-image.jpg' %}
+    <meta property="og:image" content="{{ 'https://krcadinac.com/static/' ~ main_img_path }}">
+    <meta property="og:image:secure_url" content="{{ url_for('static', filename=main_img_path) }}"/>
+    <meta property="og:url" content="{{ 'https://krcadinac.com' ~ lp.menu.base.name }}">
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@krcadinac"/>
+    <meta name="twitter:title" content="{{ lp.main_title }}"/>
+    <meta name="twitter:description" content="{{ lp.main_tagline_h2|striptags }}"/>
+    <meta name="twitter:image" content="{{ url_for('static', filename=main_img_path) }}"/>
+
+    <title>{{ lp.main_title }}</title>
+
+{% endblock %}
+
+{% set lang_link = lp.lang_info.counter_lang %}
+{% block langlinkage %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="body-landing">
+
+        <main class="landing">
+
+            <div class="title-block">
+                <h1 class="landing">{{ lp.main_tagline_h1|safe }}</h1>
+                <h2 class="landing">{{ lp.main_tagline_h2|safe }}</h2>
+                {% set lang_link = lp.menu.base.address ~ lp.menu.generator.address %}
+                <a href='{{ lang_link }}'>
+                    <button id="landing-generate">{{ lp.main_button }}</button>
+                </a>
+            </div>
+
+        </main>
+
+        <div class="title-flag">
+            <img src="{{ url_for('static', filename='space/svesvrstani/media/svesvrstani.gif') }}">
+        </div>
+
+    </div>
+
+{% endblock %}

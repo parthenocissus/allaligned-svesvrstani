@@ -1,0 +1,127 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+{% extends "svesvrstani/svesvrstani-base.html" %}
+
+{% block head %}
+
+    <meta property="og:title" content="{{ lp.main_title }} → {{ lp.menu.generator.full_name }}">
+    <meta property="og:description" content="{{ lp.main_tagline_h2|striptags }}">
+    {% set main_img_path = 'space/svesvrstani/media/og-image.jpg' %}
+    <meta property="og:image" content="{{ 'https://krcadinac.com/static/' ~ main_img_path }}">
+    <meta property="og:image:secure_url" content="{{ url_for('static', filename=main_img_path) }}"/>
+    <meta property="og:url" content="{{ 'https://krcadinac.com' ~ lp.menu.base.name }}">
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@krcadinac"/>
+    <meta name="twitter:title" content="{{ lp.main_title }} → {{ lp.menu.generator.full_name }}"/>
+    <meta name="twitter:description" content="{{ lp.main_tagline_h2|striptags }}"/>
+    <meta name="twitter:image" content="{{ url_for('static', filename=main_img_path) }}"/>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='space/svesvrstani/interface.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='space/svesvrstani/flaglabs.js') }}"></script>
+
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+        let flagMappings = JSON.parse({{ params|tojson }});
+    </script>
+
+    <title>{{ lp.main_title }} → {{ lp.menu.generator.full_name }}</title>
+
+    <style>
+
+        @media only screen and (max-width: 769px) {
+
+            .chosen-container {
+                font-size: 15px;
+            }
+
+            .chosen-container-multi .chosen-choices {
+                padding: 2px 7px;
+            }
+
+            .chosen-container-multi .chosen-choices li.search-choice {
+                margin: 3px 5px 3px 0;
+                padding: 3px 20px 3px 5px;
+            }
+
+        }
+
+    </style>
+
+{% endblock %}
+
+{% set lang_link = lp.lang_info.counter_lang ~ lp.menu.generator.address %}
+{% block langlinkage %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+
+    <main class="generator-page">
+
+        <div class="list-heading">
+            <div class="breadcrumbs">
+                <a href="{{ lp.menu.base.address }}">{{ lp.main_title }}</a> →
+            </div>
+            <h1 class="list-h">{{ lp.menu.generator.full_name }}</h1>
+            <h3 class="list-h">{{ lp.desc_generator|safe }}</h3>
+            <div id="filters">
+                <h3 class="list-h" id="filter-instruction">{{ lp.instruction_alt }}</h3>
+                <select id="choose-params" class="chosen" multiple="true" name="faculty"></select>
+                <h3 class="list-h" id="slider-header">{{ lp.instruction2 }}</h3>
+                <div id="slider-group"></div>
+            </div>
+            <button type="button" id="go">{{ lp.generate }}</button>
+            <h3 class="list-h">{{ lp.support|safe }}</h3>
+        </div>
+
+        <div id="home-flag-space">
+            <div id="spinner">
+                <img src="{{ url_for('static', filename='space/svesvrstani/img/spinner.gif') }}" alt="spinner">
+            </div>
+            <div id="flags"></div>
+        </div>
+
+    </main>
+
+    <div class="flag-downloader-back">
+        <div class="flag-downloader-container" id="outer">
+            <div class="flag-downloader">
+                <div class="chosen-flag"></div>
+                <h3 class="list-h">{{ lp.downloader.line1|safe }}</h3>
+                <h3 class="list-h">{{ lp.downloader.line2|safe }}</h3>
+                <h3 class="list-h">{{ lp.downloader.line3|safe }}</h3>
+                <h3 class="list-h">{{ lp.downloader.line4|safe }}</h3>
+                <div class="buttons">
+                    <button class="download" type="button" id="svg">SVG</button>
+                    <button class="download" type="button" id="png">PNG</button>
+                    <button class="download" type="button" id="exit">{{ lp.downloader.exit }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

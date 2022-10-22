@@ -1,0 +1,137 @@
+{#All-Aligned#}
+{#Svesvrstani#}
+{##}
+{#https://krcadinac.com/all-aligned#}
+{##}
+{#The All-Aligned is a digital art project by Uroš Krčadinac.#}
+{#An open source AI system for automated vexillology,#}
+{#it visualises the fractal-like fragmentary nature#}
+{#of our digital condition and raises questions about#}
+{#the society where identity creation is mediated by Big Tech.#}
+{##}
+{#Copyright (C) 2022.  Uroš Krčadinac#}
+{##}
+{#This program is free software: you can redistribute it and/or modify#}
+{#it under the terms of the GNU General Public License as published by#}
+{#the Free Software Foundation, either version 3 of the License, or#}
+{#(at your option) any later version.#}
+{##}
+{#This program is distributed in the hope that it will be useful,#}
+{#but WITHOUT ANY WARRANTY; without even the implied warranty of#}
+{#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the#}
+{#GNU General Public License for more details.#}
+{##}
+{#You should have received a copy of the GNU General Public License#}
+{#along with this program.  If not, see <https://www.gnu.org/licenses/>.#}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+
+        @font-face {
+            font-family: "Metropolis-Black";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Black.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-Bold";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Bold.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-Medium";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Medium.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-Regular";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Regular.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-RegularItalic";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-RegularItalic.woff') }}) format("woff");
+        }
+
+        @font-face {
+            font-family: "Metropolis-Thin";
+            src: url({{ url_for('static', filename='media/fonts/metropolis/Metropolis-Thin.woff') }}) format("woff");
+        }
+
+    </style>
+
+    <link rel="shortcut icon" type="image/png"
+              href="{{ url_for('static', filename='space/svesvrstani/media/svesvrstani-fav.ico') }}"/>
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lib/chosen.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='space/svesvrstani/svesvrstani-stilovi.css') }}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/d3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/canvg.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chosen.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lib/chosen.proto.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='space/svesvrstani/svesvrstani.js') }}"></script>
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+<body>
+
+
+{% block langlinkage %}
+<a id="lang-link" href="{{ lang_link }}" title="{{ lp.lang_info.tooltip }}">
+    <div id="lang">
+        <p id="other">{{ lp.lang_info.lang1 }}</p>
+        <p id="this">{{ lp.lang_info.lang2 }}</p>
+    </div>
+</a>
+{% endblock %}
+
+<aside>
+
+    <svg class="menu" x="0px" y="0px" viewBox="0 0 20 20">
+        <circle cx="10" cy="10" r="10"></circle>
+        <g id="hamburger">
+            <line id="hamburgerLine1" x1="0" y1="6.2" x2="20" y2="6.2"></line>
+            <line id="hamburgerLine2" x1="0" y1="13.8" x2="20" y2="13.8"></line>
+        </g>
+    </svg>
+
+    <h1 class="textual">
+        <a href="{{ lp.menu.base.address }}">{{ lp.main_title|safe }}</a>
+    </h1>
+    <h2 class="textual">
+        <a href="/" target="_blank">Uroš Krčadinac</a>
+    </h2>
+
+</aside>
+
+<div id="main-menu">
+    <div id="vertical-menu">
+        {% set base = lp.menu.base.address %}
+        <a href="{{ base ~ lp.menu.home.address }}" class="active">{{ lp.menu.home.name }}</a>
+        <a href="{{ base ~ lp.menu.concept.address }}">{{ lp.menu.concept.name }}</a>
+        <a href="{{ base ~ lp.menu.generator.address }}">{{ lp.menu.generator.name }}</a>
+        <a href="{{ base ~ lp.menu.exhibitions.address }}">{{ lp.menu.exhibitions.name }}</a>
+        <a href="{{ base ~ lp.menu.essays.address }}">{{ lp.menu.essays.name }}</a>
+{#        <a href="{{ base ~ lp.menu.press.address }}">{{ lp.menu.press.name }}</a>#}
+        <a href="{{ base ~ lp.menu.code.address }}">{{ lp.menu.code.name }}</a>
+        <a href="{{ base ~ lp.menu.merch.address }}">{{ lp.menu.merch.name }}</a>
+    </div>
+</div>
+
+<div id="gray-fog"></div>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
